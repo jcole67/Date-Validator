@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool isValid(int month, day, year);
+bool isValid(int& month,int& day,int& year);
 
 int main()
 {
@@ -16,16 +16,105 @@ int main()
     if (isValid(month, day, year) == true)
         cout << "Date validated.";
     else
-        cout << "Invalid date entered. Changed to " << ;
+        cout << "Invalid date entered. Changed to " << month << "/" << day << "/" << year;
     return 0;
 }
 
-bool isValid (int month, day, year)
+bool isValid (int& month,int& day,int& year)
 {
-    if (month == 4 || month == 6 || month == 9 || month == 11)
-        return true;
-    else
-        return false;
+    switch (month) {
+        case 1:
+            if (day <= 31)
+                return true;
+            else
+                day = (day - 31);
+                month = (month + 1);
+                return false;
+            break;
+        case 2:
+            break;
+        case 3:
+            if (day <= 31)
+                return true;
+            else
+                day = (day - 31);
+                month = (month + 1);
+                return false;
+            break;
+        case 4:
+            if (day <= 30)
+                return true;
+            else
+                day = (day - 30);
+                month = (month + 1);
+                return false;
+            break;
+        case 5:
+            if (day <= 31)
+                return true;
+            else
+                day = (day - 31);
+                month = (month + 1);
+                return false;
+            break;
+        case 6:
+            if (day <= 30)
+                return true;
+            else
+                day = (day - 30);
+                month = (month + 1);
+                return false;
+            break;
+        case 7:
+            if (day <= 31)
+                return true;
+            else
+                day = (day - 31);
+                month = (month + 1);
+                return false;
+            break;
+        case 8:
+            if (day <= 31)
+                return true;
+            else
+                day = (day - 31);
+                month = (month + 1);
+                return false;
+            break;
+        case 9:
+            if (day <= 30)
+                return true;
+            else
+                day = (day - 30);
+                month = (month + 1);
+                return false;
+            break;
+        case 10:
+            if (day <= 31)
+                return true;
+            else
+                day = (day - 31);
+                month = (month + 1);
+                return false;
+            break;
+        case 11:
+            if (day <= 30)
+                return true;
+            else
+                day = (day - 30);
+                month = (month + 1);
+                return false;
+            break;
+        case 12:
+            if (day <= 31)
+                return true;
+            else
+                day = (day - 31);
+                month = 1;
+                year = (year + 1);
+                return false;
+            break;
+    }
 }
 
 /* Write a function that takes the current date and corrects the number of days, if it's wrong.
