@@ -6,7 +6,6 @@ bool isValid(int& month, int& day, int& year);
 
 int main()
 {
-    
     int month, day, year;
     char slash;
     
@@ -15,15 +14,18 @@ int main()
     
     if ( (month >= 1) && (month <= 12) )
     {
-        if (isValid(month, day, year) == true)
-        cout << "Date validated.";
-    else
-        cout << "Invalid date entered. Changed to " << month << "/" << day << "/" << year;
+        if ( (day >= 1) && (day <= 59) )
+        {
+            if (isValid(month, day, year) == true)
+                cout << "Date validated.";
+            else
+                cout << "Invalid date entered. Changed to " << month << "/" << day << "/" << year;
+        }
+        else
+            cout << "Please enter a vaild day (1 - 59). Try again.";
     }
     else
-    {
         cout << "Please enter a vaild month (1 - 12). Try again.";
-    }
     
     return 0;
 }
