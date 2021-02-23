@@ -13,10 +13,17 @@ int main()
     cout << "Enter a date: ";
     cin >> month >> slash >> day >> slash >> year;
     
-    if (isValid(month, day, year) == true)
+    if ( (month >= 1) && (month <= 12) )
+    {
+        if (isValid(month, day, year) == true)
         cout << "Date validated.";
     else
         cout << "Invalid date entered. Changed to " << month << "/" << day << "/" << year;
+    }
+    else
+    {
+        cout << "Please enter a vaild month (1 - 12). Try again.";
+    }
     
     return 0;
 }
