@@ -26,10 +26,10 @@ int main()
                 cout << "Invalid date entered. Changed to " << month << "/" << day << "/" << year;  //print correction of an erroneous date
         }
         else
-            cout << "Please enter a vaild day. Try again.";            //error message for invalid day
+            cout << "Please enter a vaild day. Try again.";                     //error message for invalid day
     }
     else
-        cout << "Please enter a vaild month. Try again.";              //error message for invalid month
+        cout << "Please enter a vaild month. Try again.";                       //error message for invalid month
     
     return 0;
 }
