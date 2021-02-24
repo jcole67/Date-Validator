@@ -31,6 +31,8 @@ int main()
     else
         cout << "Please enter a vaild month. Try again.";                       //error message for invalid month
     
+    system("pause");                                                            //Platform dependent pause
+    
     return 0;
 }
 
